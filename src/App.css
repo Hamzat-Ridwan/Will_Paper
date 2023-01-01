@@ -1,38 +1,82 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body{
+  font-family: 'Patrick Hand', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app{
+  /* padding: 5% 20vw; */
+  width: 65vw;
+  margin: 5% auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2{
+  margin-bottom: 20px;
+  font-size: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.subtext{
+  margin-bottom: 30px;
+}
+
+.item{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.item.last{
+  margin-bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.item a{
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1.5px solid #000;
+  padding-bottom: 1px;
+}
+
+.item .link {
+  margin-right: 3vw;
+  width: 150px;
+}
+
+.link span{
+  margin-right: 2px;
+}
+
+.arrow{
+  display: flex;
+  align-items: flex-end;
+}
+
+.man{
+  position: absolute;
+  right: 15vw;
+  bottom: 5%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+  .app{
+    width: 90vw;
   }
-  to {
-    transform: rotate(360deg);
+  .item .link{
+    margin-right: 1vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app{
+    width: 95vw;
+  }
+  .item {
+    flex-direction: column;
+  }
+  .item .link{
+    margin-bottom: 15px;
+  }
+  .man{
+    position: static;
   }
 }
